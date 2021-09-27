@@ -10,13 +10,13 @@ public final class MapSchema extends BaseSchema {
     }
 
     public MapSchema sizeof(int size) {
-        addValidator(data -> data instanceof Map && ((Map<?, ?>) data).size() == size);
+        addValidator(data -> data == null || data instanceof Map && ((Map<?, ?>) data).size() == size);
         return this;
     }
 
     public MapSchema shape(Map<String, BaseSchema> schemas) {
 
-        addValidator(data -> data instanceof Map && schemas.entrySet().stream()
+        addValidator(data -> data == null || data instanceof Map && schemas.entrySet().stream()
                 .allMatch(sc -> {
                     final Object key = sc.getKey();
                     final BaseSchema validator = sc.getValue();
