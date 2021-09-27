@@ -42,8 +42,11 @@ testlogger {
 
 jacocoTestReport {
   dependsOn test
+  reports {
+    xml.enabled true
+  }
 }
 
 checkstyle {
-  toolVersion '8.41'
+  toolVersion '9.0'
 }
