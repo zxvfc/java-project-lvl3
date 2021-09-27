@@ -13,8 +13,8 @@ plugins {
   id 'jacoco'
 }
 
-group = 'io.hexlet'
-version = '1.0.3-SNAPSHOT'
+group = 'hexlet.code'
+version = '1.0-SNAPSHOT'
 
 repositories {
   mavenCentral()
