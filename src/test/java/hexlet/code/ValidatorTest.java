@@ -98,7 +98,7 @@ class ValidatorTest {
     @Test
     void testMapValueValidator() {
         final Validator v = new Validator();
-        Map<Object, BaseSchema> schemas = Map.of("name", v.string().required(),
+        Map<String, BaseSchema> schemas = Map.of("name", v.string().required(),
                                                  "age", v.number().positive());
 
         final int hundred = 100;

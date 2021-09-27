@@ -14,7 +14,7 @@ public final class MapSchema extends BaseSchema {
         return this;
     }
 
-    public MapSchema shape(Map<Object, BaseSchema> schemas) {
+    public MapSchema shape(Map<String, BaseSchema> schemas) {
 
         addValidator(data -> data instanceof Map && schemas.entrySet().stream()
                 .allMatch(sc -> {
