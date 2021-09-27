@@ -89,10 +89,10 @@ class ValidatorTest {
         assertTrue(schema.isValid(data));
 
         schema.sizeof(2);
+        assertFalse(schema.isValid(data));
 
-        schema.isValid(data);
         data.put("key2", "value2");
-        schema.isValid(data);
+        assertTrue(schema.isValid(data));
     }
 
     @Test
