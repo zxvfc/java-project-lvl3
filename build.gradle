@@ -7,14 +7,12 @@
 
 plugins {
   id 'java'
-//  id 'maven-publish'
+  id 'maven-publish'
   id 'checkstyle'
   id 'com.adarshr.test-logger' version '2.1.1'
   id 'com.github.ben-manes.versions' version '0.38.0'
   id 'jacoco'
 }
-
-apply plugin: 'maven-publish'
 
 group = 'com.github.zxvfc'
 version = '1.0'
@@ -47,7 +45,7 @@ publishing {
 }
 
 wrapper {
-  gradleVersion = "7.3.3"
+  gradleVersion = "7.4"
   distributionType = Wrapper.DistributionType.ALL
 }
 
